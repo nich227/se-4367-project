@@ -1,1 +1,1 @@
-# se-4367-proj
+# SE 4367 Course Project
