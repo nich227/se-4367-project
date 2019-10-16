@@ -6,7 +6,6 @@
   <artifactId>se-4367-project-phase1</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>SE 4367 Project Phase 1</name>
-that can capture the statement coverage for the program under test.</description>
   <packaging>jar</packaging>
 
   <build>
