@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: ningc
+Build-Jdk: 11.0.4
+Main-Class: project.Main
+Created-By: Maven Integration for Eclipse
+
