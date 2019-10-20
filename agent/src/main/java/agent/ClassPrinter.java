@@ -1,10 +1,12 @@
 package agent;
 
 import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 public class ClassPrinter extends ClassVisitor {
+	
 
     public ClassPrinter(final ClassVisitor cv) {
         super(Opcodes.ASM5, cv);
@@ -18,9 +20,7 @@ public class ClassPrinter extends ClassVisitor {
 
     @Override
     public MethodVisitor visitMethod(final int access, final String name, final String desc, final String signature, final String[] exceptions) {
-        System.out.println(" " + name + desc + access);
-        //return super.visitMethod(access, name, desc, signature, exceptions);
-        MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
+    	MethodVisitor mv = cv.visitMethod(access, name, desc, signature, exceptions);
         return mv == null ? null : new MethodTransformVisitor(mv, name);
     }
     

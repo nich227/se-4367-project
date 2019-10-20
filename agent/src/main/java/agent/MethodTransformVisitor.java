@@ -14,32 +14,28 @@ class MethodTransformVisitor extends MethodVisitor implements Opcodes {
         this.mName = name;
     }
 
-    // method coverage collection
-    @Override
-    public void visitCode() {
-        mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-        mv.visitLdcInsn(mName + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
-        super.visitCode();
-    }
-
     // statement coverage collection
     @Override
     public void visitLineNumber(int line, Label start) {
-        this.line = line;
-
-    	mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-        mv.visitLdcInsn("line " + line + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+    	if (line != 0) {
+    		this.line = line;
+    		mv.visitLdcInsn(mName);
+    		mv.visitLdcInsn(new Integer(line));
+    		mv.visitMethodInsn(INVOKESTATIC, "java/lang/Integer", "valueOf", "(I)Ljava/lang/Integer;", false);
+    		mv.visitMethodInsn(INVOKESTATIC, "agent/CollectCoverage", "addMethodLine", "(Ljava/lang/String;Ljava/lang/Integer;)V", false);
+    	}
         super.visitLineNumber(line, start);
     }
 
     // visit a label
     @Override
     public void visitLabel(Label label) {
-    	mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
-        mv.visitLdcInsn("line " + line + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+    	if (line != 0) {
+    		mv.visitLdcInsn(mName);
+    		mv.visitLdcInsn(new Integer(line));
+    		mv.visitMethodInsn(INVOKESTATIC, "java/lang/Integer", "valueOf", "(I)Ljava/lang/Integer;", false);
+    		mv.visitMethodInsn(INVOKESTATIC, "agent/CollectCoverage", "addMethodLine", "(Ljava/lang/String;Ljava/lang/Integer;)V", false);
+    	}
         super.visitLabel(label);
     }
 }
