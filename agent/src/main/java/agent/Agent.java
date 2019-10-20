@@ -19,8 +19,8 @@ public class Agent {
                     // ASM Code
                     ClassReader reader = new ClassReader(bytes);
                     ClassWriter writer = new ClassWriter(reader, 0);
-                    ClassPrinter visitor = new ClassPrinter(writer);
-                    reader.accept(visitor, 0);
+                    ClassPrinter cVisitor = new ClassPrinter(writer);
+                    reader.accept(cVisitor, 0);
                     return writer.toByteArray();
                 }
 

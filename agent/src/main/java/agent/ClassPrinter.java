@@ -2,15 +2,14 @@ package agent;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.Label;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
 public class ClassPrinter extends ClassVisitor {
-	
-	int line;
 
-    public ClassPrinter(ClassWriter writer) {
-        super(Opcodes.ASM4, writer);
+    public ClassPrinter(final ClassVisitor cv) {
+        super(Opcodes.ASM4, cv);
     }
 
     @Override
@@ -24,7 +23,7 @@ public class ClassPrinter extends ClassVisitor {
         System.out.println(" " + name + desc + access);
         return super.visitMethod(access, name, desc, signature, exceptions);
     }
-
+    
     @Override
     public void visitEnd() {
         System.out.println("}");
