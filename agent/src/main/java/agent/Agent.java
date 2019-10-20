@@ -15,7 +15,7 @@ public class Agent {
             public byte[] transform(ClassLoader classLoader, String s, Class<?> aClass,
                     ProtectionDomain protectionDomain, byte[] bytes) throws IllegalClassFormatException {
 
-                if ("other/Stuff".equals(s)) {
+                if ("project/Stuff".equals(s)) {
                     // ASM Code
                     ClassReader reader = new ClassReader(bytes);
                     ClassWriter writer = new ClassWriter(reader, 0);
