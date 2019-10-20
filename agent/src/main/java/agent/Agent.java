@@ -18,8 +18,8 @@ public class Agent {
                 if ("project/Stuff".equals(s)) {
                     // ASM Code
                     ClassReader reader = new ClassReader(bytes);
-                    ClassWriter writer = new ClassWriter(reader, 0);
-                    ClassPrinter cVisitor = new ClassPrinter(writer);
+                    ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
+                    ClassTransformVisitor cVisitor = new ClassTransformVisitor(writer);
                     reader.accept(cVisitor, 0);
                     return writer.toByteArray();
                 }
