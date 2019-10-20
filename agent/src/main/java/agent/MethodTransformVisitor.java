@@ -10,7 +10,7 @@ class MethodTransformVisitor extends MethodVisitor implements Opcodes {
     int line;
 
     public MethodTransformVisitor(final MethodVisitor mv, String name) {
-        super(ASM4, mv);
+        super(ASM5, mv);
         this.mName = name;
     }
 
@@ -19,7 +19,7 @@ class MethodTransformVisitor extends MethodVisitor implements Opcodes {
     public void visitCode() {
         mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
         mv.visitLdcInsn(mName + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
+        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         super.visitCode();
     }
 
@@ -30,7 +30,7 @@ class MethodTransformVisitor extends MethodVisitor implements Opcodes {
 
     	mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
         mv.visitLdcInsn("line " + line + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
+        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         super.visitLineNumber(line, start);
     }
 
@@ -39,7 +39,7 @@ class MethodTransformVisitor extends MethodVisitor implements Opcodes {
     public void visitLabel(Label label) {
     	mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
         mv.visitLdcInsn("line " + line + " executed");
-        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
+        mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         super.visitLabel(label);
     }
 }
