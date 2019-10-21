@@ -7,32 +7,38 @@ import it.unimi.dsi.fastutil.ints.IntSet;
 
 public class CollectCoverage {
 	
-	private static HashMap<String, IntSet> linesCovered;
-	private static HashMap<String, HashMap<String, IntSet>> testCases;
+	private static HashMap<String, IntLinkedOpenHashSet> linesCovered;
+	private static HashMap<String, HashMap<String, IntLinkedOpenHashSet>> testCases;
 	private static String testName;
 	
 	//Constructors
 	public CollectCoverage() {
-		linesCovered = new HashMap<String, IntSet>();
-		testCases = new HashMap<String, HashMap<String, IntSet>>();
+		linesCovered = new HashMap<String, IntLinkedOpenHashSet>();
+		testCases = new HashMap<String, HashMap<String, IntLinkedOpenHashSet>>();
 		testName = "";
 	}
 	
 	//Accessors
-	public HashMap<String, IntSet> getLinesCovered() {return linesCovered;}
-	public HashMap<String, HashMap<String, IntSet>> getTestCases() {return testCases;}
+	public HashMap<String, IntLinkedOpenHashSet> getLinesCovered() {return linesCovered;}
+	public HashMap<String, HashMap<String, IntLinkedOpenHashSet>> getTestCases() {return testCases;}
 	public String getTestName() {return testName;}
 	
 	//Mutators
-	public void setLinesCovered(HashMap<String, IntSet> lc) {linesCovered = lc;}
-	public void setTestCases(HashMap<String, HashMap<String, IntSet>> tc) {testCases = tc;}
+	public void setLinesCovered(HashMap<String, IntLinkedOpenHashSet> lc) {linesCovered = lc;}
+	public void setTestCases(HashMap<String, HashMap<String, IntLinkedOpenHashSet>> tc) {testCases = tc;}
 	public void setTestName(String tn) {testName = tn;}
 	
 	
 	public static void addCoveredLine(String name, Integer line) {
 		
+		//The lines covered is empty
+		if(linesCovered == null || linesCovered.isEmpty() == true)
+			return;
+		
+		IntLinkedOpenHashSet covered_lines = linesCovered.get(name);
+		
 		//If linesCovered has no values for the specified class name
-		if(linesCovered.get(name) == null) {
+		if(covered_lines == null) {
 			int[] new_set = {line};
 			linesCovered.put(name, new IntLinkedOpenHashSet(new_set));
 			return;
