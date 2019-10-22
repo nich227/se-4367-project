@@ -50,14 +50,6 @@
 
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <configuration>
-          <properties>
-            <property>
-              <name>listener</name>
-              <value>agent.JUnitListener</value>
-            </property>
-          </properties>
-        </configuration>
         <executions>
           <execution>
             <phase>package</phase>
