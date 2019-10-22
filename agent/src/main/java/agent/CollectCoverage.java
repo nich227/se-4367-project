@@ -7,9 +7,9 @@ import it.unimi.dsi.fastutil.ints.IntSet;
 
 public class CollectCoverage {
 	
-	private static HashMap<String, IntLinkedOpenHashSet> linesCovered;
-	private static HashMap<String, HashMap<String, IntLinkedOpenHashSet>> testCases;
-	private static String testName;
+	public static HashMap<String, IntLinkedOpenHashSet> linesCovered;
+	public static HashMap<String, HashMap<String, IntLinkedOpenHashSet>> testCases;
+	public static String testName;
 	
 	//Constructors
 	public CollectCoverage() {
@@ -17,7 +17,7 @@ public class CollectCoverage {
 		testCases = new HashMap<String, HashMap<String, IntLinkedOpenHashSet>>();
 		testName = "";
 	}
-	
+
 	//Accessors
 	public HashMap<String, IntLinkedOpenHashSet> getLinesCovered() {return linesCovered;}
 	public HashMap<String, HashMap<String, IntLinkedOpenHashSet>> getTestCases() {return testCases;}

@@ -15,8 +15,11 @@ public class Agent {
             public byte[] transform(ClassLoader classLoader, String s, Class<?> aClass,
                     ProtectionDomain protectionDomain, byte[] bytes) throws IllegalClassFormatException {
 
-                if ("project/Stuff".equals(s)) {
+                if (s.startsWith("org/apache/commons/dbutils") ||
+                        s.startsWith("org/joda/time") ||
+                        "other/Stuff".equals(s)) {
                     // ASM Code
+                    System.out.println("Java Agent is executing\n");
                     ClassReader reader = new ClassReader(bytes);
                     ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
                     ClassTransformVisitor cVisitor = new ClassTransformVisitor(writer);
