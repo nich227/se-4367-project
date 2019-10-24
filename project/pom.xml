@@ -38,15 +38,16 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.19.1</version>
         <configuration>
-          <argLine>-javaagent:target/project-0.0.1-SNAPSHOT.jar</argLine>
+          <argLine>-javaagent:../agent/target/agent-0.0.1-SNAPSHOT.jar</argLine>
           <properties>
             <property>
               <name>listener</name>
-              <value>com.codereq.test.CommonListener</value>
+              <value>agent.JUnitListener</value>
             </property>
           </properties>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
 

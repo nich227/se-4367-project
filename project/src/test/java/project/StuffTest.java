@@ -12,32 +12,24 @@ import static org.junit.Assert.*;
  */
 public class StuffTest {
 
-   Stuff stuff;
-    @BeforeClass
-    public void setup(){
-        stuff = new Stuff();
-    }
+    Stuff stuff;
 
-   @After
-    public void cleanup(){
-        stuff = null;
+    @Test
+    public void addTest() {
+        Stuff stuff = new Stuff();
+        assertTrue("1+1", 2 == stuff.add(1, 1));
     }
 
     @Test
-    public void addTest(){
+    public void subTest() {
         Stuff stuff = new Stuff();
-        assertTrue("1+1", 2==stuff.add(1,1));
+        assertTrue("1-1", 0 == stuff.sub(1, 1));
     }
+
     @Test
-    public void subTest(){
+    public void multiTest() {
         Stuff stuff = new Stuff();
-        assertTrue("1-1", 0==stuff.sub(1,1));
-    }
-    @Test
-    public void multiTest(){
-        Stuff stuff = new Stuff();
-        assertTrue("1-1", 0==stuff.add(
-                stuff.sub(stuff.sub(1,0),stuff.sub(1,0)),
-                stuff.sub(stuff.sub(1,0),stuff.sub(1,0))));
+        assertTrue("1-1", 0 == stuff.add(stuff.sub(stuff.sub(1, 0), stuff.sub(1, 0)),
+                stuff.sub(stuff.sub(1, 0), stuff.sub(1, 0))));
     }
 }
