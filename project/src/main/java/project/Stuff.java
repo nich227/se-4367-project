@@ -5,15 +5,14 @@ public class Stuff {
         System.out.println("I AM DOING SOME STUFF...");
     }
 
-    public int add(int a , int b){
-        return a+b;
-    }
-    public int sub(int a , int b){
-        return a-b;
-    }
-
-    public int mul(int a , int b){
-        return a*b;
-}
-
+    /**
+     * Returns an integer square root of x (discarding the fractional parts)
+     */
+     public int isqrt(int x) {
+	     int guess = 1;
+	     while (guess * guess < x) {
+	     	guess++;
+     }
+     return guess;
+     }
 }
