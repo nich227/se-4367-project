@@ -24,12 +24,6 @@
       <version>4.12</version>
 
     </dependency>
-  <dependency>
-    <groupId>asm-code-coverage</groupId>
-  <artifactId>agent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <scope>test</scope>
-</dependency>
 
   </dependencies>
 
