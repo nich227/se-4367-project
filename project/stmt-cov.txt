@@ -1,1 +1,8 @@
-project.StuffTest:testStuff
+[TEST]project.StuffTest:twoTest
+project/Stuff:16
+[TEST]project.StuffTest:multiTest
+project/Stuff:16
+[TEST]project.StuffTest:OneTest
+project/Stuff:16
+[TEST]project.StuffTest:testStuff
+project/Stuff:16

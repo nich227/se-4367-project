@@ -17,4 +17,22 @@ public class StuffTest {
 		assertEquals(10, tester.isqrt(100));
 	}
 
+     @Test
+    public void OneTest(){
+        Stuff tester = new Stuff();
+        assertEquals(1, tester.isqrt(0));
+    }
+    @Test
+    public void twoTest(){
+        Stuff tester = new Stuff();
+        assertEquals(1, tester.isqrt(1));
+    }
+    @Test
+    public void multiTest(){
+        Stuff tester = new Stuff();
+       assertEquals(2, tester.isqrt(2));
+    }
+
+
+
 }

@@ -1,7 +1,8 @@
 package agent;
 
 import java.util.HashMap;
-
+import it.unimi.dsi.fastutil.ints.IntSet;
+import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.ints.IntLinkedOpenHashSet;
 
 public class CollectCoverage {
@@ -18,33 +19,34 @@ public class CollectCoverage {
 	}
 
 	//Accessors
-	public HashMap<String, IntLinkedOpenHashSet> getLinesCovered() {return linesCovered;}
-	public HashMap<String, HashMap<String, IntLinkedOpenHashSet>> getTestCases() {return testCases;}
-	public String getTestName() {return testName;}
-	
-	//Mutators
-	public void setLinesCovered(HashMap<String, IntLinkedOpenHashSet> lc) {linesCovered = lc;}
-	public void setTestCases(HashMap<String, HashMap<String, IntLinkedOpenHashSet>> tc) {testCases = tc;}
-	public void setTestName(String tn) {testName = tn;}
+
 	
 	
 	public static void addCoveredLine(String name, Integer line) {
 		
 		//The lines covered is empty
-		if(linesCovered == null || linesCovered.isEmpty() == true)
-			return;
-		
-		IntLinkedOpenHashSet covered_lines = linesCovered.get(name);
-		
+		if(linesCovered == null || linesCovered.isEmpty() == true){
+
+		System.out.println("This is the line " + name +"| "+ line);
+
+	    }
+
+	   IntLinkedOpenHashSet covered_lines = linesCovered.get(name);
 		//If linesCovered has no values for the specified class name
 		if(covered_lines == null) {
 			int[] new_set = {line};
+			System.out.println("This is the line " + name +"| "+ line);
 			linesCovered.put(name, new IntLinkedOpenHashSet(new_set));
-			return;
+			//System.out.println("Putting line number" + line + "in" + name);
 		}
 		
+		else{
 		//If adding lines to existing linesCovered
-		linesCovered.get(name).add(line);
-		
+		covered_lines = new IntLinkedOpenHashSet(new int[]{line});
+			System.out.println("This is the line " + name +"| "+ line);
+		   linesCovered.put(name, covered_lines);
+		} 
 	}
+		
+	
 }

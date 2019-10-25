@@ -24,7 +24,7 @@ public class JUnitListener extends RunListener {
 
     public void testStarted(Description description) {
         System.out.println("\n\n\nStarting .... " + description.getMethodName());
-        CollectCoverage.testName = "" + description.getClassName() + ":" + description.getMethodName();
+        CollectCoverage.testName = "[TEST]" + description.getClassName() + ":" + description.getMethodName();
         CollectCoverage.linesCovered = new HashMap<String, IntLinkedOpenHashSet>();
     }
     public void testFinished(Description description) {
@@ -42,13 +42,17 @@ public class JUnitListener extends RunListener {
         for (String testCaseName : CollectCoverage.testCases.keySet()) {
             builder.append(testCaseName + "\n");
 
+
+
             HashMap<String, IntLinkedOpenHashSet> caseCoverage =
-                    CollectCoverage.testCases.get(testCaseName);
+                    CollectCoverage.linesCovered;
+            System.out.println(Arrays.asList(caseCoverage));
 
             for (String className : caseCoverage.keySet()) {
                 int[] lines = caseCoverage.get(className).toIntArray();
 
                 Arrays.sort(lines);
+                System.out.println(Arrays.toString(lines));
                 for (int i = 0; i < lines.length; i++) {
                     builder.append(className + ":" + lines[i] + "\n");
                 }
