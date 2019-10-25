@@ -3,7 +3,6 @@ package agent;
 import java.util.HashMap;
 
 import it.unimi.dsi.fastutil.ints.IntLinkedOpenHashSet;
-import it.unimi.dsi.fastutil.ints.IntSet;
 
 public class CollectCoverage {
 	

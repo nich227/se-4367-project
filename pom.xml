@@ -16,10 +16,6 @@
     <module>project</module>
   </modules>
 
-  <prerequisites>
-    <maven>3.1</maven>
-  </prerequisites>
-
   <build>
     <pluginManagement>
       <plugins>
