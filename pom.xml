@@ -13,7 +13,7 @@
 
   <modules>
     <module>agent</module>
-    <module>project</module>
+    <module>commons-dbutils</module>
   </modules>
 
   <build>
