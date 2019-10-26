@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="Audience" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Who is this book for?</title>
+    <section>
+        <title>About "Hadoop illuminated"</title>
+        <para>This book is our experiment in making Hadoop knowledge available
+            to a wider audience. We want this book to serve as a gentle introduction to Big Data and Hadoop.  No deep technical knowledge is needed to go through the book.  It can even be a bedtime read :-)
+        </para>
+        <para>
+            The book is freely available.  It is licensed under <link xlink:href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</link>.
+        </para>
+        <para>
+            "Hadoop Illuminated" is a work in progress.  It is a 'living book'.  We will keep updating the book to reflect the fast-moving world of Big Data and hadoop.  So keep checking back.
+        </para>
+        <para>
+            We appreciate your feedback. You can follow it on Twitter,
+            discuss it in Google Groups, or send your feedback via email.
+        </para>
+        <itemizedlist>
+            <listitem>
+                Twitter : <link xlink:href="https://twitter.com/HadoopIlluminat">@HadoopIllumint</link>
+            </listitem>
+            <listitem>
+                Google Group : <link xlink:href="http://groups.google.com/group/hadoop-illuminated">Hadoop Illuminated Google group</link>
+            </listitem>
+            <listitem>
+                Email Authors Directly : <link xlink:href="mailto:authors@HadoopIlluminated.com">authors@hadoopilluminated.com</link>
+            </listitem>
+            <listitem>
+                Book GitHub : <link xlink:href="https://github.com/hadoop-illuminated/hadoop-book">github.com/hadoop-illuminated/hadoop-book</link>
+            </listitem>
+            <listitem>
+                Source Code on  GitHub : <link xlink:href="https://github.com/hadoop-illuminated/HI-labs">github.com/hadoop-illuminated/HI-labs</link>
+            </listitem>
+        </itemizedlist>
+    </section>
+
+
+</chapter>

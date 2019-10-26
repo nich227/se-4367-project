@@ -1,0 +1,7 @@
+[TEST]Belly:a few cukes
+io/cucumber/skeleton/StepDefinitions:5
+io/cucumber/skeleton/StepDefinitions:8
+io/cucumber/skeleton/StepDefinitions:9
+io/cucumber/skeleton/StepDefinitions:10
+io/cucumber/skeleton/Belly:3
+io/cucumber/skeleton/Belly:6

@@ -1,0 +1,48 @@
+Coverage Collection Tool Read Me:
+
+The project code is located in the agent folder.
+The project ran against 10 real world projects taken from Dr. Zhang's recommended links. The statement coverage for all 10 sites are located in the Statement Coverage folder. The project code comes pre compiled with for project commons-dbuilts and EasyFlow- Master. In order to run the test coverage on those two projects simply visit the respective folder and run "mvn test" command. If the user wish to run a different project. Follow the steps below.
+
+1. Go in to agent\src\main\java\agent\Agent.java and add the main class location of the respective project to the if statement Ex: 
+                if ("project/Stuff".equals(s) == true || s.startsWith("add the main class path here") == true || s.startsWith("org/apache/commons/dbutils") == true) {
+
+
+
+2. Add the following dependency snippet to test project pom.
+
+
+
+
+          <dependency>
+             <groupId>asm-code-coverage</groupId>
+             <artifactId>agent</artifactId>
+             <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+
+
+
+3. Add the following plug in snippet to test project pom.(Note relative path is given for the agent path)
+    
+<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <argLine>-javaagent:../agent/target/agent-0.0.1-SNAPSHOT.jar</argLine>
+          <properties>
+            <property>
+              <name>listener</name>
+              <value>agent.JUnitListener</value>
+            </property>
+          </properties>
+          <excludes>
+            
+          </excludes>
+        </configuration>
+      </plugin>
+
+4. After completing previous steps, simply run the command "mvn test" inside the test project to obtained the code coverage. Report will be generated in the project test root.
+
+
+Note:
+
+When employing other projects beyond the projects given in this folder there will be instances where Mvn build failure might occur whenever other project's test fails, and this is not cause by the coverage tool. And fixing the test case in the other projects is not the objective of this tool.

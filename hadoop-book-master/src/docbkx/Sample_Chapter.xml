@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="Sample_Chapter" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Sample Chapter</title>
+    <section>
+        <title>section 1</title>
+        <para>
+            Figure
+            <figure id="sample-figure">
+                <title>Old Mac</title>
+                <!-- this fits images niceely -->
+                <inlinegraphic fileref="tidal_wave_of_data_scaled.png" format="PNG" scalefit="1" contentdepth="100%" width="100%" />
+            </figure>
+
+            <figure>
+                <title>Will you join the Hadoop dance?</title>
+                <graphic fileref="hadoop-dance-resized.png"></graphic>
+            </figure>
+
+            Just an image
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="macintosh_classic1.jpg" format="JPG" scale="100" />
+                </imageobject>
+            </mediaobject>
+        </para>
+    </section>
+
+    <!-- nested section -->
+    <sect1>
+        <title>sect1</title>
+        <para>
+            sample link : <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
+        </para>
+        <sect2>
+            <title>sect1.1</title>
+            <para>
+                para3
+            </para>
+        </sect2>
+    </sect1>
+
+    <section>
+        <para>
+            Linking to other chapters
+            See here for complete list of <xref linkend="Challenges"/>
+        </para>
+
+         <formalpara>
+            <title>Para with a title</title>
+            <sbr/>
+            <para>
+                content
+            </para>
+        </formalpara>
+    </section>
+
+    <!-- list -->
+    <para>
+        <itemizedlist>
+            <listitem>The Hadoop Source</listitem>
+            <listitem>No packaging except TAR balls</listitem>
+            <listitem>No extra tools</listitem>
+        </itemizedlist>
+
+    </para>
+</chapter>

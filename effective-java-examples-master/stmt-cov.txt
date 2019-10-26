@@ -1,0 +1,3 @@
+[TEST]org.effectivejava.examples.AppTest:testApp
+org/effectivejava/examples/AppTest:36
+org/effectivejava/examples/AppTest:37

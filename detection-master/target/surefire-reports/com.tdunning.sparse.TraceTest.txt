@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.tdunning.sparse.TraceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.093 sec <<< FAILURE! - in com.tdunning.sparse.TraceTest
+testRead212(com.tdunning.sparse.TraceTest)  Time elapsed: 0.062 sec  <<< ERROR!
+java.io.FileNotFoundException: C:\Users\diyoh\Desktop\Test%20proj%20phase1\PhaseIFInal\anomaly-detection-master\target\test-classes\cu01.dat (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at com.tdunning.sparse.Trace.read212(Trace.java:48)
+	at com.tdunning.sparse.TraceTest.testRead212(TraceTest.java:18)
+

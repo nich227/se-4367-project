@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="Challenges" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hadoop Challenges</title>
+    <para>
+        This chapter explores some of the challenges in adopting Hadoop in to a company.
+    </para>
+
+    <section>
+        <title>Hadoop is a cutting edge technology </title>
+        <para>
+            Hadoop is a new technology, and as with adopting any new technology, finding people who know the technology is difficult!
+        </para>
+    </section>
+
+    <section>
+        <title>Hadoop in the Enterprise Ecosystem</title>
+        <para>
+            Hadoop is designed to solve Big Data problems encountered by Web and Social companies.  In doing so a lot of the features Enterprises need or want are put on the back burner.  For example, HDFS does not offer native support for security and authentication.
+        </para>
+    </section>
+
+    <section>
+        <title>Hadoop is still rough around the edges</title>
+        <para>
+            The development and admin tools for Hadoop are still pretty new.  Companies like Cloudera, Hortonworks, MapR and Karmasphere have been working on this issue.  How ever the tooling may not be as mature as Enterprises are used to (as say, Oracle Admin, etc.)
+        </para>
+    </section>
+
+    <section>
+        <title>Hadoop is NOT cheap</title>
+        <section>
+            <title>Hardware Cost</title>
+            <para>
+                Hadoop runs on 'commodity' hardware. But these are not cheapo machines, they are server grade hardware.  For more see <xref linkend="Hardware_Software"/>
+            </para>
+            <para>
+                So standing up a reasonably large Hadoop cluster, say 100 nodes, will cost a significant amount of money.   For example, lets say a Hadoop node is $5000, so a 100 node cluster would be $500,000 for hardware.
+            </para>
+        </section>
+
+        <section>
+            <title>IT and Operations costs</title>
+            <para>
+                A large Hadoop cluster will require support from various teams like : Network Admins,  IT, Security Admins,  System Admins.
+            </para>
+            <para>
+                Also one needs to think about operational costs like Data Center expenses : cooling, electricity, etc.
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Map Reduce is a different programming paradigm</title>
+        <para>
+            Solving problems using Map Reduce requires a different kind of thinking.   Engineering teams generally need additional training to take advantage of Hadoop.
+        </para>
+    </section>
+
+
+    <section>
+        <title>Hadoop and High Availability</title>
+        <para>
+            Hadoop version 1 had a single point of failure problem because of NameNode.  There was only one NameNode for the cluster, and if it went down, the whole Hadoop cluster would be inoperable.  This has prevented the use of Hadoop for mission critical, always-up applications.
+        </para>
+        <para>
+            This problem is more pronounced on paper than in reality.  Yahoo did a study that analyzed their Hadoop cluster failures and found that only a tiny fraction of failures were caused by NameNode failure.<sbr/>
+            TODO : link
+        </para>
+        <para>
+            However, this problem is being solved by various Hadoop providers.  See <xref linkend="HA"/> chapter for more details.
+        </para>
+    </section>
+
+
+</chapter>

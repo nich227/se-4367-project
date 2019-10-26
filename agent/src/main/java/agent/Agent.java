@@ -15,7 +15,7 @@ public class Agent {
             public byte[] transform(ClassLoader classLoader, String s, Class<?> aClass,
                     ProtectionDomain protectionDomain, byte[] bytes) throws IllegalClassFormatException {
 
-                if ("project/Stuff".equals(s) == true || s.startsWith("org/apache/commons/dbutils") == true) {
+                if ("project/Stuff".equals(s) == true || s.startsWith("au/com/ds/ef") == true || s.startsWith("org/apache/commons/dbutils") == true) {
                     // ASM Code
                     System.out.println("Java Agent is executing\n");
                     ClassReader reader = new ClassReader(bytes);

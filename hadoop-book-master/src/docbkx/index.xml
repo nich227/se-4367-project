@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book version="5.0" xmlns="http://docbook.org/ns/docbook"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:m="http://www.w3.org/1998/Math/MathML"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:db="http://docbook.org/ns/docbook" xml:id="book">
+
+    <title>Hadoop Illuminated</title>
+    <info>
+        <authorgroup>
+            <author>
+                <firstname>Mark</firstname>
+                <surname>Kerzner</surname>
+                <contrib>Author</contrib>
+                <email>mark@elephantscale.com</email>
+            </author>
+            <author>
+                <firstname>Sujee</firstname>
+                <surname>Maniyam</surname>
+                <contrib>Author</contrib>
+                <email>sujee@elephantscale.com</email>
+            </author>
+        </authorgroup>
+    </info>
+
+    <dedication>
+        <para>To the open source community
+        </para>
+        <para>
+            <ulink url="https://github.com/hadoop-illuminated/hadoop-book">This book on GitHub</ulink> <sbr/>
+            <ulink url="https://github.com/hadoop-illuminated/HI-labs">Companion project on GitHub</ulink>
+        </para>
+    </dedication>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="acknowledgements.xml" />
+
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Audience.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="About_Authors.xml" />
+        <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Code.xml" />  -->
+
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Big_Data.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_and_Big_Data.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Execs.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_For_Developers.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Intro_To_Hadoop.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="HDFS_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="MapReduce_Intro.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hadoop_Use_Cases.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Distributions.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Ecosystem.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="BI_Tools_For_Hadoop.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Hardware_Software.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Challenges.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Public_Bigdata_Sets.xml" />
+        <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Bigdata_Links.xml" />
+
+
+
+
+    <!--
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="Sorting1.xml" />
+    -->
+</book>

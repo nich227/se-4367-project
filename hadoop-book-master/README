@@ -1,0 +1,12 @@
+The text and the source code for the Hadoop illuminated book, see http://www.hadoopilluminated.com
+
+The book is written with docbook, http://code.google.com/p/docbkx-tools/
+To generate the book in HTML and PDF, do this:
+    $ mvn clean pre-site
+
+References:
+
+* xsl formatting reference : http://www.sagehill.net/docbookxsl/index.html
+
+* docbooks quick reference : http://docbook.org/tdg/en/html/quickref.html
+

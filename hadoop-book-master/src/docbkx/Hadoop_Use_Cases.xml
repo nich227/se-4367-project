@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter version="5.0" xml:id="Hadoop_Use_Cases" xmlns="http://docbook.org/ns/docbook"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         xmlns:xi="http://www.w3.org/2001/XInclude"
+         xmlns:svg="http://www.w3.org/2000/svg"
+         xmlns:m="http://www.w3.org/1998/Math/MathML"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns:db="http://docbook.org/ns/docbook">
+
+    <title>Hadoop Use Cases and Case Studies</title>
+    <para>
+        This is a collection of some use cases of Hadoop.  This is not meant to be an exhaustive list, but a sample to give you some ideas.
+    </para>
+    <para>
+        A pretty extensive list is available at the <link xlink:href="http://wiki.apache.org/hadoop/PoweredBy">Powered By Hadoop site</link>
+    </para>
+    <!-- template
+    <section>
+        <title>Dodd-Frank Compliance @  a bank</title>
+        <para>
+        intro
+        </para>
+        <para>
+            <emphasis role="bold">Problem: </emphasis>
+            problem
+        </para>
+        <para>
+            <emphasis role="bold">Solution: </emphasis>
+            solution
+        </para>
+        <para>
+            <emphasis role="bold">Hadoop Vendor: </emphasis>
+            Cloudera
+        </para>
+        <para>
+            <emphasis role="bold">Cluster/Data size: </emphasis>
+            20+ nodes;  1TB of data / month
+        </para>
+        <para>
+            <emphasis role="bold">Links: </emphasis><sbr/>
+            <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
+            (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
+            (Published Nov 2012)
+            <sbr/>
+        </para>
+    </section>
+    -->
+
+    <section>
+        <title>Politics</title>
+        <section>
+            <title>2012 US Presidential Election</title>
+            <para>
+                <link xlink:href="http://www.computerworld.com/s/article/9233587/Barack_Obama_39_s_Big_Data_won_the_US_election">How Big Data help Obama win re-election</link>  - by Michael Lynch, the founder of <link xlink:href="http://www.autonomy.com/">Autonomy</link>
+                (<link xlink:href="cached_reports/Barack_Obama_Big_Data_won_the_US_election__Computerworld.pdf">cached copy</link>)
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Data Storage</title>
+        <section>
+            <title>NetApp</title>
+            <para>
+                NetApp collects diagnostic data from its storage systems deployed at customer sites.  This data is used to analyze the health of NetApp systems.
+
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                NetApp collects over 600,000 data transactions weekly, consisting of unstructured logs and system diagnostic information.  Traditional data storage systems proved inadequate to capture and process this data.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                A Cloudera Hadoop system captures the data and allows parallel processing of data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                30+ nodes;  7TB of data / month
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_NetApp.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/Cloudera_Case_Study_NetApp.pdf">cached copy</link>)
+                (Published Sep 2012)
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Financial Services</title>
+        <section>
+            <title>Dodd-Frank Compliance at a bank</title>
+            <para>
+                A leading retail bank is using Cloudera and Datameer to validate data accuracy and quality to comply with regulations like Dodd-Frank
+
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                The previous solution using Teradata and IBM Netezza was time consuming and complex, and the data mart approach didn’t provide the data completeness required for determining overall data quality.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                A Cloudera + Datameer platform allows analyzing trillions of records which currently result in approximately one terabyte per month of reports. The results are reported through a data quality dashboard.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera + Datameer
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                20+ nodes;  1TB of data / month
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/connect_case_study_datameer_banking_financial.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/connect_case_study_datameer_banking_financial.pdf">cached copy</link>)
+                (Published Nov 2012)
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+
+    <section>
+        <title>Health Care</title>
+        <section>
+            <title>Storing and processing Medical Records</title>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                A health IT company instituted a policy of saving seven years of historical claims and remit data, but its in-house database systems had trouble meeting the data retention requirement while processing millions of claims every day
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                A Hadoop system allows archiving seven years’ claims and remit data, which requires complex processing to get into a normalized format, logging terabytes of data generated from transactional systems daily, and storing them in CDH for analytical purposes
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop vendor: </emphasis>
+                <sbr/>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                10+ nodes pilot;  1TB of data / day
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Case_Study_Healthcare.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/Cloudera_Case_Study_Healthcare.pdf">cached copy</link>)
+                (Published Oct 2012)
+                <sbr/>
+            </para>
+        </section>
+
+        <section>
+            <title>Monitoring patient vitals at Los Angeles Children's Hospital</title>
+            <para>
+                Researchers at LA Children's Hospital is using Hadoop to capture and analyze medical sensor data.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting lots (billions) of data points from sensors / machines attached to the patients.  This data was periodically purged before because storing this large volume of data on expensive storage was  cost-prohibitive.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Continuously streaming data from sensors/machines is collected and stored in HDFS.  HDFS provides scalable data storage at reasonable cost.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Unknown
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ???
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.youtube.com/watch?v=NmMbFM7l1Rs">video</link>
+                <sbr/>
+                <link xlink:href="http://siliconangle.com/blog/2013/06/27/leveraging-hadoop-to-advance-healthcare-research-childrens-hospital-use-case-hadoopsummit/">silicon angle story</link>
+                (Published June 2013)
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+
+    <section>
+        <title>Human Sciences</title>
+
+        <section>
+            <title>NextBio</title>
+            <para>
+                NextBio is using Hadoop MapReduce and HBase to process massive amounts of human genome data.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Processing multi-terabyte data sets wasn't feasible using traditional databases like MySQL.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                NextBio uses Hadoop map reduce to process genome data in batches and it uses HBase as a scalable data store
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop vendor: </emphasis>
+                <sbr/>
+                Intel
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.nextbio.com/">NextBio</link>
+                <sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelNextBioCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelNextBioCaseStudy.pdf">cached copy</link>)
+                (Published Feb 2013)
+                <sbr/>
+                <link xlink:href="http://www.informationweek.com/software/information-management/hbase-hadoops-next-big-data-chapter/232901601?pgno=1">Information Week article (May 2012)</link>
+                (<link xlink:href="cached_reports/www.informationweek_2012_05_08.pdf">cached copy</link>)
+            </para>
+
+        </section>
+
+    </section> <!-- end human sciences -->
+
+
+    <section>
+        <title>Telecoms</title>
+        <section>
+            <title>China Mobil Guangdong</title>
+            <para>
+                <emphasis role="bold">Problem: </emphasis> Storing billions of mobile call records and providing real time access to the call records and billing information to customers.  <sbr/>
+                Traditional storage/database systems couldn't scale to the loads and provide a cost effective solution
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis> HBase is used to store billions of rows of call record details.  30TB of data is added monthly
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop vendor: </emphasis> Intel
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop cluster size: </emphasis> 100+ nodes
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://gd.10086.cn/">China Mobil Quangdong</link>
+                <sbr/>
+                <link xlink:href="http://hadoop.intel.com/pdfs/IntelChinaMobileCaseStudy.pdf">Intel case study</link> (<link xlink:href="cached_reports/IntelChinaMobileCaseStudy.pdf">cached copy</link>)
+                (Published Feb 2013)
+                <sbr/>
+                <link xlink:href="http://www.slideshare.net/IntelAPAC/apac-big-data-dc-strategy-update-for-idh-launch-rk">Intel APAC presentation</link>
+            </para>
+
+        </section>
+
+        <section>
+            <title>Nokia</title>
+            <para>
+                Nokia collects and analyzes vast amounts of data from mobile phones
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                (1) Dealing with 100TB of structured data and 500TB+ of semi-structured data <sbr/>
+                (2) 10s of PB across Nokia, 1TB / day
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                HDFS data warehouse allows storing all the semi/multi structured data and offers processing data at peta byte scale
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                <sbr/>
+                (1) 500TB of data <sbr/>
+                (2) 10s of PB across Nokia, 1TB / day
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                (1) <link xlink:href="http://www.cloudera.com/content/dam/cloudera/Resources/PDF/Cloudera_Nokia_Case_Study_Hadoop.pdf">Cloudera case study</link>
+                (<link xlink:href="cached_reports/Cloudera_Nokia_Case_Study_Hadoop.pdf">cached copy</link>)
+                (Published Apr 2012)
+                <sbr/>
+                (2) <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Big%20Data%20Analytics%20Platform%20at%20Nokia%20%E2%80%93%20Selecting%20the%20Right%20Tool%20for%20the%20Right%20Workload%20Presentation.pdf">strata NY 2012 presentation slides</link>
+                (<link xlink:href="cached_reports/Nokia_Bigdata.pdf">cached copy</link>)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/26880">Strata NY 2012 presentation</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Travel</title>
+        <section>
+            <title>Orbitz</title>
+            <para>
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Orbitz generates tremendous amounts of log data.  The raw logs are only stored for a few days because of costly data warehousing.  Orbitz needed an effective way to store and process this data, plus they needed to improve their hotel rankings.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                A Hadoop cluster provided a very cost effective way to store vast amounts of raw logs.  Data is cleaned and analyzed and machine learning algorithms are run.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.slideshare.net/jseidman/windy-citydb-final-4635799">Orbitz presentation</link>
+                (Published 2010)
+                <sbr/>
+                <link xlink:href="http://www.datanami.com/datanami/2012-04-26/six_super-scale_hadoop_deployments.html">Datanami article</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Energy</title>
+        <section>
+            <title>Seismic Data at Chevron</title>
+            <para>
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Chevron analyzes vast amounts of seismic data to find potential oil reserves.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop offers the storage capacity and processing power to analyze this data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                IBM Big Insights
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://almaden.ibm.com/colloquium/resources/Managing%20More%20Bits%20Than%20Barrels%20Breuning.PDF">Presentation</link>
+                (<link xlink:href="cached_reports/IBM_Chevron.pdf">cached copy</link>)
+                (Published June 2012)
+                <sbr/>
+            </para>
+            <para>
+            </para>
+        </section>
+        <section>
+            <title>OPower</title>
+            <para>
+                OPower works with utility companies to provide engaging, relevant, and personalized content about home energy use to millions of households.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting and analyzing massive amounts of data and deriving insights into customers' energy usage.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop provides a single storage for all the massive data and machine learning algorithms are run on the data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://cdn.oreillystatic.com/en/assets/1/event/85/Data%20Science%20with%20Hadoop%20at%20Opower%20Presentation.pdf">presentation</link>
+                (<link xlink:href="cached_reports/Opower.pdf">cached copy</link>)
+                (Published Oct 2012)
+                <sbr/>
+                <link xlink:href="http://strataconf.com/stratany2012/public/schedule/detail/25736">Strata NY 2012</link>
+                <sbr/>
+                <link xlink:href="http://strataconf.com/strata2013/public/schedule/detail/27158">Strata 2013</link>
+                <sbr/>
+                <link xlink:href="http://www.opower.com">OPower.com</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Logistics</title>
+        <section>
+            <title>Trucking data @ US Xpress</title>
+            <para>
+                US Xpress - one of the largest trucking companies in US - is using Hadoop to store sensor data from their trucks.  The intelligence they mine out of this, saves them $6 million / year in fuel cost alone.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Collecting and and storing 100s of data points from thousands of trucks, plus lots of geo data.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Hadoop allows storing enormous amount of sensor data.  Also Hadoop allows querying / joining this data with other data sets.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+
+                <link xlink:href="http://www.computerweekly.com/news/2240146943/Case-Study-US-Xpress-deploys-hybrid-big-data-with-Informatica">Computer Weekly article</link> (Published May 2012)
+                <sbr/>
+                <link xlink:href="http://hortonworks.com/wp-content/uploads/downloads/2013/06/Hortonworks.BusinessValueofHadoop.v1.0.pdf">Hortonworks white paper on 'Business Value of Hadoop'</link>                 (<link xlink:href="cached_reports/Hortonworks.BusinessValueofHadoop.v1.0.pdf">cached copy</link>) (Published July 2013)
+
+                <sbr/>
+                <link xlink:href="http://www.usxpress.com/">USXpress.com</link>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Retail</title>
+        <section>
+            <title>Etsy</title>
+            <para>
+                <link xlink:href="http://www.etsy.com">Etsy</link> is an online market place for handmade stuff.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Analyzing large volume of log data, without taxing the databases
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                Etsy uses Hadoop to analyze large volumes of log data to calculate user behaviour,  search recommendations...etc
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Amazon Elastic Map Reduce (EMR)
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                varies
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.slideshare.net/mwalkerinfo/funnel-analysis-in-hadoop-at-etsy">Hadoop at Etsy</link>  (March 2013)
+                <sbr/>
+                <link xlink:href="http://gigaom.com/2011/11/02/how-etsy-handcrafted-a-big-data-strategy/">gigaom article</link> (Nov 2011)
+                <sbr/>
+                <link xlink:href="http://assets.en.oreilly.com/1/event/61/Ephemeral%20Hadoop%20Clusters%20in%20the%20Cloud%20Presentation.pdf">pdf</link>
+                (<link xlink:href="cached_reports/Esty_Ephemeral_Hadoop_Clusters_in_the_Cloud.pdf">cached copy</link>)
+                (Nov 2011)
+                <sbr/>
+            </para>
+        </section>
+
+        <section>
+            <title>Sears</title>
+            <para>
+                <link xlink:href="http://www.sears.com">Sears</link> is a department store (online and brick and mortar).
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Sears' process for analyzing marketing campaigns for loyalty club members used to take six weeks on mainframe, Teradata, and SAS servers. The old models made use of 10% of available data
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                The new process running on Hadoop can be completed weekly. For certain online and mobile commerce scenarios, Sears can now perform daily analyses. Targeting is more granular, in some cases down to the individual customer.  New process can use 100% of available data.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <link xlink:href="http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717">http://www.informationweek.com/global-cio/interviews/why-sears-is-going-all-in-on-hadoop/240009717</link>  (Oct 2012)
+                <sbr/>
+                <link xlink:href="http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings">http://www.metascale.com/resources/blogs/187-big-data-case-study-hadoop-first-usage-in-production-at-sears-holdings</link>  (Aug 2013)
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Software / Software As Service (SAS) / Platforms / Cloud</title>
+        <section>
+            <title>SalesForce</title>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                Analyzing data that is generated at a rate of multiple terabytes / day
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                SalesForce uses Hadoop to compute Product Metrics,  Customer Behavior, Monitoring ..etc
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Apache Hadoop
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://www.salesforce.com">SalesForce</link>
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.slideshare.net/narayan26/data-sciencewebinar-061312-13372205">presentation</link>  (June 2012)
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+        <section>
+            <title>Ancestry</title>
+            <para>
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Ancestry users have created more than 47 million family trees containing more than 5 billion profiles of relatives. Added to the current mass archive, the new flood of gene-sequencing data generated by Ancestry’s recently-introduced DNA testing product will present Big Data challenges.
+                <sbr/>
+                Ancestry manages 11 billion records (4 petabytes) of searchable structured and unstructured data consisting of birth, death, census, military, immigration and other records.
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Using HBase to manage large searchable datastore.  Using Hadoop to scale geneology algorithms.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://strataconf.com/stratany2013/public/schedule/detail/30499">talk at Strata 2013</link>  (Oct 2013)
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.ancestry.com/">Ancestry.com</link>
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Imaging / Videos</title>
+        <section>
+            <title>SkyBox</title>
+            <para>
+                SkyBox is developing a low cost imaging satellite system and web-accessible big data processing platform that will capture video or images of any location on Earth
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Analyzing really large volumes image data downloaded from the satellites
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Skybox uses Hadoop to process images in parallel.  Their image processing algorithms are in C/C++.  Their proprietary framework 'BusBoy' allows using native code from Hadoop MapReduce Java framework.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera and Amazon EC2
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://blog.cloudera.com/blog/2012/10/sneak-peek-into-skybox-imagings-cloudera-powered-satellite-system/">Case Study @ Cloudera</link>  (Oct 2012),
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://searchbusinessanalytics.techtarget.com/feature/Companies-using-Hadoop-for-analytics-bring-meaning-to-satellite-data">TechTarget article</link>  (Aug 2013)
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.skyboximaging.com/">SkyBox</link>
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+
+        <section>
+            <title>Comcast</title>
+            <para>
+                Comcast provides video and bandwidth to lots of US customers.
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Analyzing large volumes of data generated by video players and monitoring performance issues in real time
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Comcast uses a Hadoop infrastructure to capture and analyze large volumes of 'dial-home' data generated by multitude of video players.  They do both analysis in (near) real time and in batch mode
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://strataconf.com/stratany2013/public/schedule/detail/30915">Talk at Strata 2013</link>  (Oct 2013),
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="http://www.comcast.com/">Comcast</link>
+                    </listitem>
+                </itemizedlist>
+                <sbr/>
+            </para>
+        </section>
+    </section>
+
+    <section>
+        <title>Online Publishing , Personalized Content</title>
+        <section>
+            <title>Gravity</title>
+            <para>
+                Gravity’s mission is to personalize the internet by generating interest graphs that help websites deliver customized content to every site visitor.
+
+            </para>
+            <para>
+                <emphasis role="bold">Problem: </emphasis>
+                <sbr/>
+                Building user profiles from large volumes of data
+            </para>
+            <para>
+                <emphasis role="bold">Solution: </emphasis>
+                <sbr/>
+                Gravity uses Hadoop to analyze data and build profile and targets content for users.  With improved targeting the click rates have gone up 300-400% and users are staying on the site longer.
+            </para>
+            <para>
+                <emphasis role="bold">Hadoop Vendor: </emphasis>
+                Cloudera
+            </para>
+            <para>
+                <emphasis role="bold">Cluster/Data size: </emphasis>
+                ?
+            </para>
+            <para>
+                <emphasis role="bold">Links: </emphasis>
+                <sbr/>
+                <itemizedlist>
+                    <listitem>
+                        <link xlink:href="http://www.cloudera.com/content/cloudera/en/resources/library/video/gravity-creates-a-personalized-web-experience.html">Cloudera case study</link>
+                    </listitem>
+                    <listitem>
+                        <link xlink:href="https://www.gravity.com/">Gravity</link>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    </section>
+
+</chapter>

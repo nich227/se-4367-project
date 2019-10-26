@@ -280,7 +280,7 @@
             </property>
           </properties>
           <excludes>
-            <exclude>**/BaseTestCase.java</exclude>
+            
           </excludes>
         </configuration>
       </plugin>
