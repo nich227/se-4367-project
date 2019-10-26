@@ -19,43 +19,43 @@ public class JUnitListener extends RunListener {
 	}
 
 	public void testStarted(Description description) {
-		System.out.println("\n-----\nStart ... " + description.getMethodName());
+		System.out.println("\n-----\nStarting - " + description.getMethodName());
 		CollectCoverage.testName = "[TEST]" + description.getClassName() + ":" + description.getMethodName();
 		CollectCoverage.linesCovered = new HashMap<String, IntLinkedOpenHashSet>();
 	}
 
 	public void testFinished(Description description) {
-		System.out.println("Finish ... " + description.getMethodName());
+		System.out.println("Finished - " + description.getMethodName());
 		CollectCoverage.testCases.put(CollectCoverage.testName, CollectCoverage.linesCovered);
 	}
 
 	public void testRunFinished(Result result) throws IOException {
-		System.out.println("Done\n\n");
+		System.out.println("Test done\n\n\n\nResults:");
 
 		File fout = new File("stmt-cov.txt");
+		StringBuilder str_builder = new StringBuilder();
 		FileOutputStream fos = new FileOutputStream(fout);
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
-
-		StringBuilder builder = new StringBuilder();
+		
+		
 		for (String testCaseName : CollectCoverage.testCases.keySet()) {
-			System.out.println("Test case: " + testCaseName);
-			builder.append(testCaseName + "\n");
+			System.out.print("Test case: " + testCaseName);
+			str_builder.append(testCaseName + "\n");
 
 			HashMap<String, IntLinkedOpenHashSet> caseCoverage = CollectCoverage.testCases.get(testCaseName);
 			System.out.println(Arrays.asList(caseCoverage));
 
-			for (String className : caseCoverage.keySet()) {
-				int[] lines = caseCoverage.get(className).toIntArray();
-
+			for (String cName : caseCoverage.keySet()) {
+				int[] lines = caseCoverage.get(cName).toIntArray();
 				Arrays.sort(lines);
 				System.out.println(Arrays.toString(lines));
-				for (int i = 0; i < lines.length; i++) {
-					builder.append(className + ":" + lines[i] + "\n");
+				for (int line : lines) {
+					str_builder.append(cName + ":" + line + "\n");
 				}
 			}
 		}
 
-		bw.write(builder.toString());
+		bw.write(str_builder.toString());
 		bw.close();
 	}
 

@@ -9,19 +9,12 @@ public class CollectCoverage {
 	public static HashMap<String, HashMap<String, IntLinkedOpenHashSet>> testCases;
 	public static String testName;
 
-	// Constructors
-	public CollectCoverage() {
-		linesCovered = new HashMap<String, IntLinkedOpenHashSet>();
-		testCases = new HashMap<String, HashMap<String, IntLinkedOpenHashSet>>();
-		testName = "";
-	}
-
 	// Accessors
 
 	public static void addCoveredLine(String name, Integer line) {
 
 		// The lines covered is empty
-		if (linesCovered == null || linesCovered.isEmpty() == true) {
+		if (linesCovered == null) {
 
 			System.out.println("This is the line " + name + "| " + line);
 			return;
@@ -39,9 +32,8 @@ public class CollectCoverage {
 
 		else {
 			// If adding lines to existing linesCovered
-			covered_lines = new IntLinkedOpenHashSet(new int[] { line });
 			System.out.println("This is the line " + name + "| " + line);
-			linesCovered.put(name, covered_lines);
+			covered_lines.add(line);
 		}
 	}
 
