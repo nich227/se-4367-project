@@ -39,7 +39,7 @@ public class JUnitListener extends RunListener {
 		
 		
 		for (String testCaseName : CollectCoverage.testCases.keySet()) {
-			System.out.print("Test case: " + testCaseName);
+			//System.out.print("Test case: " + testCaseName);
 			str_builder.append(testCaseName + "\n");
 
 			HashMap<String, IntLinkedOpenHashSet> caseCoverage = CollectCoverage.testCases.get(testCaseName);
