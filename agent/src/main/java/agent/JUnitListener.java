@@ -43,12 +43,12 @@ public class JUnitListener extends RunListener {
 			str_builder.append(testCaseName + "\n");
 
 			HashMap<String, IntLinkedOpenHashSet> caseCoverage = CollectCoverage.testCases.get(testCaseName);
-			System.out.println(Arrays.asList(caseCoverage));
+			//System.out.println(Arrays.asList(caseCoverage));
 
 			for (String cName : caseCoverage.keySet()) {
 				int[] lines = caseCoverage.get(cName).toIntArray();
 				Arrays.sort(lines);
-				System.out.println(Arrays.toString(lines));
+				//System.out.println(Arrays.toString(lines));
 				for (int line : lines) {
 					str_builder.append(cName + ":" + line + "\n");
 				}
